@@ -32,7 +32,6 @@
                   <e p="FirstPersonController.cs" t="Include" />
                   <e p="HeadBob.cs" t="Include" />
                   <e p="MouseLook.cs" t="Include" />
-                  <e p="RigidbodyFirstPersonController.cs" t="Include" />
                 </e>
               </e>
               <e p="RollerBall" t="Include">
@@ -224,6 +223,7 @@
           <e p="Player" t="Include">
             <e p="PlayerHealth.cs" t="Include" />
           </e>
+          <e p="RigidbodyFirstPersonController.cs" t="Include" />
           <e p="Utility" t="Include">
             <e p="DeathHandler.cs" t="Include" />
             <e p="SceneLoader.cs" t="Include" />

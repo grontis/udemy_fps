@@ -16,6 +16,13 @@ public class Weapon : MonoBehaviour
 
     private bool canShoot = true;
 
+    private HFConfig hfConfig;
+
+    private void Start()
+    {
+        hfConfig = FindObjectOfType<HFConfig>();
+    }
+
     private void OnEnable()
     {
         canShoot = true;
@@ -24,10 +31,21 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && canShoot)
+        if (hfConfig.controllerInput.GetSensorValue(hfConfig.fire) > 800 && canShoot) 
         {
             StartCoroutine(Shoot());
         }
+        
+        //UNCOMMENT FOR Mouse firing input
+        /*if (Input.GetButtonDown("Fire1") && canShoot) 
+        {
+            StartCoroutine(Shoot());
+        }*/
+    }
+
+    public void FireWeapon()
+    {
+        
     }
     
     IEnumerator Shoot()

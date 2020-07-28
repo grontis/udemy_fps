@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -13,7 +14,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Ammo ammoSlot;
     [SerializeField] private AmmoType ammoType;
     [SerializeField] private float timeBetweenShots = 0.5f;
-
+    [SerializeField] private TextMeshProUGUI ammoText;
+    
     private bool canShoot = true;
 
     private HFConfig hfConfig;
@@ -31,16 +33,27 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hfConfig.controllerInput.GetSensorValue(hfConfig.fire) > 800 && canShoot) 
+        if (hfConfig.controllerInput.IsConnected)
         {
-            StartCoroutine(Shoot());
+            DisplayAmmo();
+            
+            if (hfConfig.controllerInput.GetSensorValue(hfConfig.fire) > 800 && canShoot) 
+            {
+                StartCoroutine(Shoot());
+            }
         }
         
         //UNCOMMENT FOR Mouse firing input
-        /*if (Input.GetButtonDown("Fire1") && canShoot) 
+        if (Input.GetButtonDown("Fire1") && canShoot) 
         {
             StartCoroutine(Shoot());
-        }*/
+        }
+    }
+
+    private void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmount(AmmoType.Bullets);
+        ammoText.text = currentAmmo.ToString();
     }
 
     public void FireWeapon()

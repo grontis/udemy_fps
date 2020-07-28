@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class OldFPSController : MonoBehaviour
 {
@@ -104,10 +105,7 @@ public class OldFPSController : MonoBehaviour
         private float verticalInputValue = 0f;
         private float horizontalInputValue = 0f;
         [SerializeField] float rotateSpeed = 50f;
-
-        private HFController controllerInput;
-
-
+        
 
         public Vector3 Velocity
         {
@@ -142,8 +140,6 @@ public class OldFPSController : MonoBehaviour
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init(transform, cam.transform);
-
-            controllerInput = new HFController();
         }
 
 
@@ -151,16 +147,10 @@ public class OldFPSController : MonoBehaviour
         {
             RotateView();
 
-            if (Input.GetKeyDown(KeyCode.Space) && !m_Jump)
+            if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
             }
-
-            //UNCOMMENT FOR NORMAL CROSSPLATFORM INPUT
-            /*if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
-            {
-                m_Jump = true;
-            }*/
         }
 
 

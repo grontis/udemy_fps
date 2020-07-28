@@ -94,7 +94,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] float rotateSpeed = 50f;
         
         private HFConfig hfConfig;
-        
 
         public Vector3 Velocity
         {

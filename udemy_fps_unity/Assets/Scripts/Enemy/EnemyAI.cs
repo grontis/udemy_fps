@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        target = GameObject.FindWithTag("Player").transform;
     }
 
     void Update()

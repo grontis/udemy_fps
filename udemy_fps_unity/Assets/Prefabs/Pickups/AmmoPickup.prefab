@@ -38262,6 +38262,11 @@ PrefabInstance:
       propertyPath: m_SelectedVertices.Array.data[162]
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 7383504353692792003, guid: cbf01d18577f0d741b723fbf101d365c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bdadbd86e36176342bd968015867f5e5, type: 2}
     - target: {fileID: 8674665159367527462, guid: cbf01d18577f0d741b723fbf101d365c,
         type: 3}
       propertyPath: m_LocalPosition.x

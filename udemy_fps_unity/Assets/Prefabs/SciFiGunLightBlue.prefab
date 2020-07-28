@@ -92,27 +92,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &1651007463703941345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0318e0de478e75341857fa3c958bf32d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FPCamera: {fileID: 0}
-  range: 100
-  damage: 20
-  flash: {fileID: 0}
-  hitEffect: {fileID: 0}
-  ammoSlot: {fileID: 0}
-  ammoType: 0
-  timeBetweenShots: 0.5
-  ammoText: {fileID: 0}
 --- !u!1001 &7337486944099862303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 3645890236731623370, guid: 738956bb3562c3d40a0169dbdf93addb,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3645890236731623370, guid: 738956bb3562c3d40a0169dbdf93addb,
         type: 3}
@@ -197,12 +176,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 738956bb3562c3d40a0169dbdf93addb, type: 3}
---- !u!1 &134812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7337486944099731843, guid: 738956bb3562c3d40a0169dbdf93addb,
-    type: 3}
-  m_PrefabInstance: {fileID: 7337486944099862303}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &449102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7337486944099982673, guid: 738956bb3562c3d40a0169dbdf93addb,
